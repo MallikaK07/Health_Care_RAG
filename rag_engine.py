@@ -6,10 +6,10 @@ and retrieval-augmented generation for clinical data analysis.
 
 import os
 import glob
-from langchain.text_splitter import RecursiveCharacterTextSplitter
+from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_community.vectorstores import Chroma
-from langchain.schema import Document
+from langchain_core.documents import Document
 
 # ─── Configuration ───────────────────────────────────────────────────────────
 
