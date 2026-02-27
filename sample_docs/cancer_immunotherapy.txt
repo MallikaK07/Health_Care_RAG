@@ -1,0 +1,25 @@
+Title: Advances in Cancer Immunotherapy: Immune Checkpoint Inhibitors and CAR-T Cell Therapy
+Source: Nature Reviews Cancer 2024
+
+Abstract:
+Cancer immunotherapy has revolutionized oncology by harnessing the body's immune system to fight malignancies. Immune checkpoint inhibitors (ICIs) and chimeric antigen receptor T-cell (CAR-T) therapy represent two transformative approaches that have demonstrated remarkable clinical outcomes across multiple cancer types. This review discusses the mechanisms, clinical applications, and emerging strategies in cancer immunotherapy.
+
+1. Immune Checkpoint Inhibitors (ICIs):
+ICIs work by blocking inhibitory receptors on T cells, thereby restoring anti-tumor immune responses. Key targets include: (a) PD-1/PD-L1 axis: Pembrolizumab (Keytruda) and nivolumab (Opdivo) are anti-PD-1 antibodies approved for melanoma, non-small cell lung cancer (NSCLC), renal cell carcinoma (RCC), and numerous other cancers. Atezolizumab (Tecentriq) and durvalumab (Imfinzi) target PD-L1. (b) CTLA-4: Ipilimumab (Yervoy), the first ICI approved by the FDA, targets CTLA-4 and is used primarily in melanoma and RCC. (c) LAG-3: Relatlimab, in combination with nivolumab (Opdualag), targets LAG-3 and is approved for melanoma.
+
+2. Predictive Biomarkers for ICIs:
+PD-L1 expression by immunohistochemistry (IHC) is used as a predictive biomarker for several cancers, though its predictive value varies by tumor type. Tumor mutational burden (TMB) >= 10 mutations/megabase is FDA-approved as a tissue-agnostic biomarker for pembrolizumab. Microsatellite instability-high (MSI-H) or mismatch repair deficient (dMMR) status predicts response to ICIs across tumor types. Emerging biomarkers include tumor-infiltrating lymphocytes (TILs), gene expression profiling, and circulating tumor DNA (ctDNA) dynamics.
+
+3. CAR-T Cell Therapy:
+CAR-T therapy involves engineering a patient's T cells to express chimeric antigen receptors targeting specific tumor antigens. FDA-approved CAR-T products include: tisagenlecleucel (Kymriah) for B-cell acute lymphoblastic leukemia (ALL) and diffuse large B-cell lymphoma (DLBCL); axicabtagene ciloleucel (Yescarta) for DLBCL and follicular lymphoma; lisocabtagene maraleucel (Breyanzi) for large B-cell lymphoma; brexucabtagene autoleucel (Tecartus) for mantle cell lymphoma; idecabtagene vicleucel (Abecma) and ciltacabtagene autoleucel (Carvykti) for multiple myeloma.
+
+4. Toxicity Management:
+Immune-related adverse events (irAEs) from ICIs can affect any organ system, with the most common being dermatologic (rash, pruritis), gastrointestinal (colitis, diarrhea), hepatic (hepatitis), endocrine (thyroiditis, hypophysitis, adrenal insufficiency), and pulmonary (pneumonitis). Management follows severity grading with corticosteroids as first-line treatment. CAR-T therapy-associated toxicities include cytokine release syndrome (CRS), treated with tocilizumab and corticosteroids, and immune effector cell-associated neurotoxicity syndrome (ICANS), managed with corticosteroids and supportive care.
+
+5. Combination Strategies:
+Combination approaches aim to enhance anti-tumor efficacy. ICI combinations (anti-PD-1 + anti-CTLA-4) have shown superior outcomes in melanoma and RCC but with increased toxicity. ICIs combined with chemotherapy are standard of care in NSCLC and triple-negative breast cancer. ICIs with targeted therapies (e.g., lenvatinib + pembrolizumab in endometrial cancer) are expanding treatment options. Bispecific antibodies engaging T cells and tumor targets represent an emerging therapeutic class.
+
+6. Future Directions:
+Next-generation approaches include allogeneic "off-the-shelf" CAR-T products, CAR-NK cell therapy, tumor-infiltrating lymphocyte (TIL) therapy (lifileucel for melanoma), cancer vaccines (mRNA-based personalized neoantigen vaccines), oncolytic virus therapy, and novel immune checkpoint targets (TIGIT, TIM-3, VISTA). Development of predictive biomarker panels and artificial intelligence-driven patient selection strategies are expected to improve treatment outcomes.
+
+Keywords: immunotherapy, checkpoint inhibitors, CAR-T, PD-1, PD-L1, CTLA-4, tumor mutational burden, cytokine release syndrome

@@ -1,0 +1,25 @@
+Title: Recent Advances in Alzheimer's Disease Research and Treatment
+Source: The Lancet Neurology 2024
+
+Abstract:
+Alzheimer's disease (AD) is the most common cause of dementia, accounting for 60-80% of all dementia cases and affecting approximately 55 million people globally. Recent breakthroughs in understanding AD pathophysiology have led to the development of novel disease-modifying therapies targeting amyloid-beta plaques. This review discusses the latest advances in AD research, diagnosis, and therapeutic interventions.
+
+1. Pathophysiology:
+The hallmark pathological features of AD include extracellular amyloid-beta (Aβ) plaques and intracellular neurofibrillary tangles composed of hyperphosphorylated tau protein. The amyloid cascade hypothesis proposes that accumulation of Aβ peptides, particularly Aβ42, initiates a pathological cascade leading to tau hyperphosphorylation, neuroinflammation, synaptic dysfunction, and neuronal death. Emerging evidence suggests that neuroinflammation mediated by microglia and astrocytes, cerebrovascular dysfunction, and impaired clearance mechanisms also play critical roles.
+
+2. Biomarkers and Diagnosis:
+Advances in biomarker development have enabled earlier and more accurate AD diagnosis. Cerebrospinal fluid (CSF) biomarkers include decreased Aβ42, increased phosphorylated tau (p-tau181, p-tau217), and increased total tau. Blood-based biomarkers, particularly plasma p-tau217 and Aβ42/Aβ40 ratio, have shown high diagnostic accuracy and may facilitate large-scale screening. Amyloid PET imaging using tracers such as florbetapir, florbetaben, and flutemetamol allows in vivo visualization of amyloid plaques. Tau PET imaging with flortaucipir provides information about tau pathology distribution and disease staging.
+
+3. Disease-Modifying Therapies:
+Lecanemab (Leqembi), a humanized monoclonal antibody targeting soluble Aβ protofibrils, demonstrated a 27% reduction in cognitive decline over 18 months in the Phase 3 CLARITY AD trial. Donanemab, targeting a modified form of deposited amyloid (N3pG Aβ), showed a 35% slowing of cognitive decline in participants with low-to-medium tau pathology in the TRAILBLAZER-ALZ 2 trial. Aducanumab (Aduhelm) was the first anti-amyloid therapy approved via accelerated approval, though its clinical benefit remained controversial. Side effects of anti-amyloid therapies include amyloid-related imaging abnormalities (ARIA), presenting as ARIA-E (edema) or ARIA-H (hemorrhage).
+
+4. Symptomatic Treatments:
+Cholinesterase inhibitors (donepezil, rivastigmine, galantamine) remain the standard symptomatic treatment for mild-to-moderate AD. Memantine, an NMDA receptor antagonist, is approved for moderate-to-severe AD and can be used in combination with cholinesterase inhibitors. Brexpiprazole has been approved for management of agitation associated with AD.
+
+5. Risk Factors and Prevention:
+Modifiable risk factors for AD include physical inactivity, hypertension, diabetes, obesity, smoking, excessive alcohol use, depression, social isolation, low educational attainment, hearing loss, traumatic brain injury, and air pollution. The Lancet Commission estimates that addressing these modifiable risk factors could prevent or delay up to 40% of dementia cases. The FINGER trial demonstrated that a multidomain lifestyle intervention (diet, exercise, cognitive training, vascular risk management) can improve cognitive function in at-risk older adults.
+
+6. Ongoing Research Directions:
+Current research frontiers include combination therapies targeting both amyloid and tau pathology, immunotherapies against tau, gene therapy approaches (targeting APOE4), anti-inflammatory agents, synaptic repair strategies, and digital biomarkers for remote monitoring. Preclinical studies exploring CRISPR-based gene editing to reduce Aβ production are also underway.
+
+Keywords: Alzheimer's disease, amyloid-beta, tau protein, lecanemab, donanemab, biomarkers, disease-modifying therapy, dementia prevention

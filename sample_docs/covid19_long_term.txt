@@ -1,0 +1,25 @@
+Title: Long COVID: Clinical Manifestations, Pathophysiology, and Management Strategies
+Source: New England Journal of Medicine (NEJM) 2024
+
+Abstract:
+Post-acute sequelae of SARS-CoV-2 infection (PASC), commonly known as Long COVID, affects an estimated 10-30% of individuals following acute COVID-19 infection. This condition is characterized by persistent or new-onset symptoms lasting beyond 4 weeks from the initial infection. Long COVID represents a significant public health challenge, with substantial impacts on quality of life, functional capacity, and healthcare systems.
+
+1. Clinical Manifestations:
+Long COVID encompasses a wide spectrum of symptoms affecting multiple organ systems. The most commonly reported symptoms include fatigue (58%), post-exertional malaise (PEM), cognitive dysfunction or "brain fog" (32%), dyspnea (26%), chest pain, palpitations, joint and muscle pain, headache, sleep disturbances, anxiety, depression, and gastrointestinal symptoms. Cardiovascular complications include myocarditis, pericarditis, postural orthostatic tachycardia syndrome (POTS), and increased risk of thromboembolic events. Neurological manifestations include autonomic dysfunction, peripheral neuropathy, and persistent anosmia.
+
+2. Pathophysiology:
+Several mechanisms have been proposed for Long COVID pathophysiology: (a) viral persistence or reservoir in tissues including the gut, brain, and lymph nodes; (b) autoimmune dysregulation with production of autoantibodies targeting G-protein coupled receptors, interferons, and connective tissue proteins; (c) reactivation of latent viruses such as Epstein-Barr virus (EBV) and human herpesvirus 6 (HHV-6); (d) persistent inflammation with elevated levels of cytokines including IL-6, TNF-alpha, and IFN-gamma; (e) endothelial dysfunction and microclot formation; and (f) gut dysbiosis with altered microbiome composition.
+
+3. Diagnosis:
+Diagnosis of Long COVID is primarily clinical, based on persistent symptoms following confirmed or probable SARS-CoV-2 infection. No single diagnostic test is currently available. Recommended evaluations include complete blood count (CBC), comprehensive metabolic panel (CMP), C-reactive protein (CRP), D-dimer, ferritin, thyroid function tests, and NT-proBNP. Specialized testing may include pulmonary function tests (PFTs), echocardiography, cardiopulmonary exercise testing (CPET), autonomic function testing, and neurocognitive assessment.
+
+4. Management Strategies:
+Management is primarily symptom-based and multidisciplinary. For fatigue and PEM, pacing strategies and activity management are essential; graded exercise therapy should be approached with caution. Cognitive rehabilitation and neuropsychological support are recommended for brain fog. Cardiovascular complications may require beta-blockers, compression garments, and increased fluid/salt intake (for POTS). Respiratory rehabilitation includes breathing exercises and pulmonary physiotherapy. Mental health support through cognitive behavioral therapy (CBT) and pharmacotherapy for anxiety/depression should be integrated into care plans.
+
+5. Vaccination Impact:
+Evidence suggests that COVID-19 vaccination prior to infection reduces the risk of developing Long COVID by approximately 50%. Some studies indicate that vaccination after developing Long COVID may improve symptoms in a proportion of patients, though results are mixed. Ongoing research is evaluating the role of antiviral treatments (nirmatrelvir/ritonavir) in the acute phase for preventing Long COVID.
+
+6. Research Priorities:
+Key research priorities include identifying reliable biomarkers for diagnosis and prognosis, understanding the natural history and recovery trajectories, developing targeted therapies based on underlying pathophysiological mechanisms, establishing standardized diagnostic criteria, and conducting large-scale randomized controlled trials for proposed treatments. The NIH RECOVER initiative is the largest ongoing study investigating Long COVID across multiple sites.
+
+Keywords: Long COVID, PASC, post-acute sequelae, fatigue, brain fog, viral persistence, autoimmunity, multidisciplinary management

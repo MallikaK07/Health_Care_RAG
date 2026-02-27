@@ -1,0 +1,25 @@
+Title: Clinical Guidelines for Type 2 Diabetes Management
+Source: American Diabetes Association (ADA) Standards of Care 2024
+
+Abstract:
+Type 2 diabetes mellitus (T2DM) remains one of the most prevalent chronic diseases worldwide, affecting approximately 462 million individuals. Effective management requires a multifaceted approach combining lifestyle modifications, pharmacotherapy, and regular monitoring. This document outlines evidence-based clinical guidelines for the comprehensive management of T2DM.
+
+1. Diagnosis and Screening:
+Diagnosis of T2DM is confirmed by fasting plasma glucose (FPG) >= 126 mg/dL, 2-hour plasma glucose >= 200 mg/dL during an oral glucose tolerance test (OGTT), HbA1c >= 6.5%, or random plasma glucose >= 200 mg/dL with classic symptoms of hyperglycemia. Screening is recommended for adults aged 35-70 years who are overweight or obese, and earlier for those with additional risk factors including family history, prior gestational diabetes, or polycystic ovary syndrome.
+
+2. Glycemic Targets:
+The recommended HbA1c target for most non-pregnant adults is < 7.0%. More stringent targets (< 6.5%) may be appropriate for select patients if achievable without significant hypoglycemia, while less stringent targets (< 8.0%) may be suitable for patients with limited life expectancy, extensive comorbidities, or a history of severe hypoglycemia.
+
+3. Pharmacological Management:
+Metformin remains the first-line pharmacological agent for T2DM due to its efficacy, safety profile, and low cost. Second-line agents include SGLT2 inhibitors (empagliflozin, dapagliflozin), GLP-1 receptor agonists (semaglutide, liraglutide), DPP-4 inhibitors (sitagliptin), thiazolidinediones, and sulfonylureas. SGLT2 inhibitors and GLP-1 receptor agonists are preferred second-line agents for patients with established atherosclerotic cardiovascular disease (ASCVD), heart failure, or chronic kidney disease.
+
+4. Lifestyle Modifications:
+Patients should aim for at least 150 minutes per week of moderate-intensity aerobic physical activity. Medical nutrition therapy (MNT) should emphasize nutrient-dense, high-fiber foods while reducing intake of refined carbohydrates and saturated fats. Weight loss of 5-10% of body weight is associated with clinically meaningful improvements in glycemic control, blood pressure, and lipid levels.
+
+5. Monitoring and Follow-up:
+HbA1c should be measured at least twice yearly in patients meeting treatment goals, and quarterly in patients whose therapy has changed or who are not meeting glycemic targets. Self-monitoring of blood glucose (SMBG) is recommended for patients on insulin therapy. Continuous glucose monitoring (CGM) devices may be beneficial for select patients.
+
+6. Complications Screening:
+Annual screening should include dilated eye examination for diabetic retinopathy, urine albumin-to-creatinine ratio (UACR) and estimated glomerular filtration rate (eGFR) for diabetic nephropathy, and comprehensive foot examination for diabetic neuropathy and peripheral arterial disease. Blood pressure should be measured at every clinical visit, with a target < 130/80 mmHg.
+
+Keywords: type 2 diabetes, glycemic control, HbA1c, metformin, SGLT2 inhibitors, GLP-1 receptor agonists, lifestyle modifications, complications screening
