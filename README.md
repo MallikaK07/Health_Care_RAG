@@ -2,7 +2,7 @@
 
 **Retrieval-Augmented Generation for Clinical Data Analysis**
 
-A prototype demonstrating a RAG (Retrieval-Augmented Generation) pipeline for intelligent querying of clinical research papers and patient documentation. Built with LangChain, ChromaDB, Hugging Face sentence-transformers, Groq LLM inference, and Streamlit.
+A Project demonstrating a RAG (Retrieval-Augmented Generation) pipeline for intelligent querying of clinical research papers and patient documentation. Built with LangChain, ChromaDB, Hugging Face sentence-transformers, Groq LLM inference, and Streamlit.
 
 ---
 
