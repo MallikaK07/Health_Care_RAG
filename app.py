@@ -118,6 +118,29 @@ with st.sidebar:
     use_hybrid = st.toggle("Hybrid search (dense + keyword)", value=True)
 
     st.markdown("---")
+    st.markdown("## 🤖 AI Model (Groq)")
+
+    groq_api_key = st.text_input(
+        "Groq API Key",
+        type="password",
+        placeholder="gsk_...",
+        help="Get a free key at console.groq.com",
+    )
+
+    model_options = {
+        "Llama 3.3 70B": "llama-3.3-70b-versatile",
+        "Llama 3 8B": "llama3-8b-8192",
+        "Mixtral 8x7B": "mixtral-8x7b-32768",
+        "Gemma 2 9B": "gemma2-9b-it",
+    }
+    selected_model_label = st.selectbox("Model", list(model_options.keys()))
+    selected_model = model_options[selected_model_label]
+    temperature = st.slider("Temperature", 0.0, 1.0, 0.3, 0.1)
+
+    if not groq_api_key:
+        st.caption("ℹ️ Without an API key, responses use extractive mode.")
+
+    st.markdown("---")
     st.markdown("## 📂 Document Store")
 
     # Count available documents
@@ -142,7 +165,7 @@ with st.sidebar:
     st.markdown("---")
     st.markdown(
         "<div style='text-align:center; color:#64748b; font-size:0.78rem;'>"
-        "Healthcare RAG v1.0<br>LangChain · ChromaDB · HuggingFace"
+        "Healthcare RAG v1.0<br>LangChain · ChromaDB · Groq"
         "</div>",
         unsafe_allow_html=True,
     )
@@ -206,9 +229,16 @@ if search_clicked and query:
     if not st.session_state.ingested:
         st.warning("⚠️ Please ingest documents first using the sidebar button.")
     else:
-        with st.spinner("🔎 Retrieving relevant documents..."):
+        with st.spinner("🔎 Retrieving and generating answer..."):
             start = time.time()
-            result = query_rag(query, k=k_results, hybrid=use_hybrid)
+            result = query_rag(
+                query,
+                k=k_results,
+                hybrid=use_hybrid,
+                groq_api_key=groq_api_key if groq_api_key else None,
+                model_name=selected_model,
+                temperature=temperature,
+            )
             elapsed = time.time() - start
 
         st.session_state.history.append(
@@ -217,10 +247,27 @@ if search_clicked and query:
 
         # Response header
         st.markdown("### 📋 Results")
-        info_cols = st.columns(3)
+        info_cols = st.columns(4)
         info_cols[0].metric("⏱️ Response Time", f"{elapsed:.2f}s")
         info_cols[1].metric("📄 Chunks Retrieved", result["num_chunks"])
         info_cols[2].metric("📚 Source Documents", result["num_sources"])
+        model_used = result.get("model", "extractive")
+        is_ai = model_used != "extractive" and "error" not in model_used
+        info_cols[3].metric("🤖 Model", model_used.split("/")[-1][:20])
+
+        # AI badge
+        if is_ai:
+            st.markdown(
+                '<span style="background:#065f46; color:#6ee7b7; padding:4px 14px; '
+                'border-radius:20px; font-size:0.85rem;">✨ AI-Generated Answer</span>',
+                unsafe_allow_html=True,
+            )
+        else:
+            st.markdown(
+                '<span style="background:#78350f; color:#fcd34d; padding:4px 14px; '
+                'border-radius:20px; font-size:0.85rem;">📝 Extractive Answer</span>',
+                unsafe_allow_html=True,
+            )
 
         # Citations
         st.markdown("**Citations:**")

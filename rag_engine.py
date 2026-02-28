@@ -10,6 +10,7 @@ from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_community.vectorstores import Chroma
 from langchain_core.documents import Document
+from langchain_core.messages import HumanMessage, SystemMessage
 
 # ─── Configuration ───────────────────────────────────────────────────────────
 
@@ -20,7 +21,7 @@ CHUNK_SIZE = 500
 CHUNK_OVERLAP = 50
 
 
-# ─── Document Loading & Preprocessing ────────────────────────────────────────
+# ─── Document Loading & Preprocessing ────────────────────────────────
 
 def load_documents(docs_dir: str = DOCS_DIR) -> list[Document]:
     """Load all .txt files from the documents directory."""
@@ -108,31 +109,87 @@ def hybrid_retrieve(query: str, vectorstore: Chroma, k: int = 4) -> list[Documen
     return [doc for _, doc in scored[:k]]
 
 
-# ─── Answer Generation (simple extractive) ───────────────────────────────────
+# ─── Answer Generation ────────────────────────────────────────────────────────
 
-def generate_answer(query: str, context_docs: list[Document]) -> dict:
-    """
-    Generate an answer from retrieved context.
-    Uses a lightweight extractive approach (no external LLM API required).
-    For production, swap this with an LLM call (e.g., HuggingFace Inference
-    or OpenAI) via LangChain's LLM chain.
-    """
-    # Build a combined context string
-    context_parts = []
-    citations = []
-    for i, doc in enumerate(context_docs, 1):
+MEDICAL_SYSTEM_PROMPT = """You are an expert healthcare AI assistant. Your role is to provide
+accurate, evidence-based answers to clinical questions using ONLY the provided context
+from medical research papers and clinical documentation.
+
+Rules:
+- Base your answer strictly on the provided context.
+- If the context does not contain enough information, clearly state that.
+- Use medical terminology appropriately and explain complex terms.
+- Structure your answer with clear headings and bullet points when helpful.
+- Always indicate the level of evidence when possible.
+- Do NOT fabricate information not present in the context."""
+
+
+def _extract_citations(context_docs: list[Document]) -> tuple[str, list[str]]:
+    """Build context string and citation list from retrieved documents."""
+    context_parts, citations = [], []
+    for doc in context_docs:
         context_parts.append(doc.page_content)
         source = doc.metadata.get("source", "unknown")
         if source not in citations:
             citations.append(source)
+    return "\n\n---\n\n".join(context_parts), citations
 
-    context = "\n\n---\n\n".join(context_parts)
 
-    # Simple extractive answer: return the most relevant context with citations
+def generate_answer(query: str, context_docs: list[Document]) -> dict:
+    """Fallback extractive answer — returns raw retrieved chunks."""
+    context, citations = _extract_citations(context_docs)
     answer = (
-        f"Based on the retrieved clinical documents, here is the relevant information:\n\n"
-        f"{context}"
+        "Based on the retrieved clinical documents, here is the relevant "
+        f"information:\n\n{context}"
     )
+    return {
+        "query": query,
+        "answer": answer,
+        "citations": citations,
+        "num_sources": len(citations),
+        "num_chunks": len(context_docs),
+        "model": "extractive",
+    }
+
+
+def generate_answer_llm(
+    query: str,
+    context_docs: list[Document],
+    groq_api_key: str,
+    model_name: str = "llama-3.3-70b-versatile",
+    temperature: float = 0.3,
+) -> dict:
+    """
+    Generate an AI-synthesized answer using Groq-hosted open-source LLMs.
+    Falls back to extractive mode on any API error.
+    """
+    from langchain_groq import ChatGroq  # lazy import to avoid load if unused
+
+    context, citations = _extract_citations(context_docs)
+
+    user_prompt = (
+        f"Context from clinical documents:\n\n{context}\n\n"
+        f"---\n\nQuestion: {query}\n\n"
+        "Provide a comprehensive, evidence-based answer."
+    )
+
+    try:
+        llm = ChatGroq(
+            api_key=groq_api_key,
+            model=model_name,
+            temperature=temperature,
+        )
+        response = llm.invoke([
+            SystemMessage(content=MEDICAL_SYSTEM_PROMPT),
+            HumanMessage(content=user_prompt),
+        ])
+        answer = response.content
+    except Exception as exc:
+        answer = (
+            f"⚠️ LLM call failed ({exc}). "
+            "Falling back to extractive results:\n\n" + context
+        )
+        model_name = "extractive (error)"
 
     return {
         "query": query,
@@ -140,6 +197,7 @@ def generate_answer(query: str, context_docs: list[Document]) -> dict:
         "citations": citations,
         "num_sources": len(citations),
         "num_chunks": len(context_docs),
+        "model": model_name,
     }
 
 
@@ -160,6 +218,9 @@ def query_rag(
     persist_dir: str = CHROMA_DIR,
     k: int = 4,
     hybrid: bool = True,
+    groq_api_key: str | None = None,
+    model_name: str = "llama-3.3-70b-versatile",
+    temperature: float = 0.3,
 ) -> dict:
     """End-to-end query pipeline: load store → retrieve → generate answer."""
     vectorstore = load_vector_store(persist_dir)
@@ -167,6 +228,11 @@ def query_rag(
         docs = hybrid_retrieve(query, vectorstore, k=k)
     else:
         docs = retrieve(query, vectorstore, k=k)
+
+    if groq_api_key:
+        return generate_answer_llm(
+            query, docs, groq_api_key, model_name, temperature
+        )
     return generate_answer(query, docs)
 
 
